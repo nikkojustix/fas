@@ -1,0 +1,40 @@
+.header {
+  margin-bottom: 60px;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    border-top: 10px solid #1b898d;
+  }
+
+  &__profile {
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+  }
+
+  &__username {
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: inherit;
+  text-decoration: none;
+
+  &__img {
+    margin-right: 20px;
+  }
+}
+.title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 30px;
+}

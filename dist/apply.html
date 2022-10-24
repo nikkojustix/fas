@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__inner">
+            <a class="logo" href="./lk.html">
+              <img class="logo__img" src="img/logo.png" alt="Федеральная антимонопольная служба" />
+              <h1 class="title">Федеральная антимонопольная служба</h1>
+            </a>
+            <div class="header__profile">
+              <img class="header__avatar" src="img/person.svg" alt="" />
+              <div class="header__username">Иванов Иван Иванович</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h2 class="main__title">Личный кабинет</h2>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="img/lk.png" alt="" /><span class="menu__link-text">Личный кабинет</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./access.html"
+                  ><img class="menu__link-icon" src="img/approaches.png" alt="" /><span class="menu__link-text"
+                    >Доступ к материалам дела</span
+                  ></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="img/approaches.png" alt="" /><span class="menu__link-text">Обращения</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="img/approaches.png" alt="" /><span class="menu__link-text">Подписка</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="img/examination.png" alt="" /><span class="menu__link-text">Самообследование</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="img/broadcasters.png" alt="" /><span class="menu__link-text">Вещатели</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <section class="petition">
+            <header class="petition__header">
+              <h2 class="petition__title main__title">Подать ходатайство</h2>
+              <a class="petition__btn" href="./access.html">Назад</a>
+            </header>
+            <div class="petition__inner">
+              <form class="form">
+                <div class="form__fields">
+                  <h3 class="form__fields-title">Заявитель</h3>
+                  <div class="form__input-box">
+                    <label class="form__label" for="type">Тип субъекта</label>
+                    <input class="form__input" id="type" type="text" value="Физическое лицо" disabled readonly />
+                  </div>
+                  <div class="form__input-box">
+                    <label class="form__label" for="name">ФИО</label>
+                    <input class="form__input" id="name" type="text" value="Иванов Иван Иванович" disabled readonly />
+                  </div>
+                </div>
+                <div class="form__fields">
+                  <h3 class="form__fields-title">Ходатайство об ознакомлении с материалами дела</h3>
+                  <span class="form__fields-descr">Поля отмеченные <span class="form__star">*</span>, обязательны для заполнения</span>
+                  <div class="form__input-box">
+                    <label class="form__label" for="department"
+                      >Управление, в котором рассматривается дело <span class="form__star">*</span></label
+                    >
+                    <select class="form__select" name="department" id="department" required>
+                      <option value="Крымское УФАС России">Крымское УФАС России</option>
+                      <option value="Курганское УФАС России">Курганское УФАС России</option>
+                      <option value="Курское УФАС России">Курское УФАС России</option>
+                      <option value="Курское УФАС России">Санкт-Петербургское УФАС России</option>
+                    </select>
+                  </div>
+                  <div class="form__input-box">
+                    <label class="form__label" for="case"
+                      >Номер дела, к которому вы хотите получить доступ <span class="form__star">*</span></label
+                    >
+                    <input class="form__input" id="case" type="text" placeholder="Номер дела" required />
+                  </div>
+
+                  <div class="form__input-box">
+                    <label class="form__label" for="status">Статус участника <span class="form__star">*</span></label>
+                    <select class="form__select" name="status" id="status" required>
+                      <option value="" disabled selected hidden>Выберите статус</option>
+                      <option value="Заявитель">Заявитель</option>
+                      <option value="Ответчик">Ответчик</option>
+                      <option value="Заинтересованное лицо">Заинтересованное лицо</option>
+                      <option value="Эксперт">Эксперт</option>
+                    </select>
+                  </div>
+                  <div class="form__input-box">
+                    <label class="form__label" for="case"
+                      >Адрес электронной почты для получения ответа <span class="form__star">*</span></label
+                    >
+                    <input class="form__input" id="email" type="email" value="ivanov.ivan86@mail.ru" required />
+                  </div>
+                  <div class="form__fields">
+                    <label class="form__upload-label" for="upload"
+                      >Документы, подтверждающие Ваше право представлять участника по этому делу <span class="form__star">*</span></label
+                    >
+                    <input class="form__upload" id="upload" type="file" required />
+                  </div>
+                  <div class="form__checkbox-group">
+                    <input class="form__checkbox" id="checkbox1" type="checkbox" required />
+                    <label class="form__label" for="checkbox1"
+                      >Я согласен защищать, сохранять в тайне, не разглашать и не распространять любую конфиденциальную информацию,
+                      предоставленную в личном кабинете <span class="form__star">*</span></label
+                    >
+                  </div>
+                  <div class="form__checkbox-group">
+                    <input class="form__checkbox" id="checkbox2" type="checkbox" required />
+                    <label class="form__label" for="checkbox2"
+                      >Я согласен, что получение доступа к делу подразумевает, что я ознакомился с оригинальными материалами дела
+                      <span class="form__star">*</span>
+                    </label>
+                  </div>
+
+                  <div class="form__checkbox-group">
+                    <input class="form__checkbox" id="checkbox3" type="checkbox" checked />
+                    <label class="form__label" for="checkbox3"
+                      >После получения доступа к материалам дела я хочу получать копии электронных документов, подписанных усиленной
+                      электронной подписью</label
+                    >
+                  </div>
+                </div>
+
+                <button class="form__btn" type="submit">Подать ходатайство</button>
+              </form>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      <footer class="footer" id="footer">
+  <div class="container">
+    <div class="footer__divider"></div>
+    <div class="footer__inner">
+      <div class="footer__info">
+        <p class="footer__copy">© ФАС России 2022.</p>
+        <a class="footer__feedback" href="#">Обратная связь</a>
+      </div>
+      <div class="footer__socials">
+        <a class="footer__social-link" href="#">
+          <img class="footer__social-img" src="img/telegram.png" alt="" />
+        </a>
+        <a class="footer__social-link" href="#">
+          <img class="footer__social-img" src="img/vk.png" alt="" />
+        </a>
+        <a class="footer__social-link" href="#">
+          <img class="footer__social-img" src="img/youtube.png" alt="" />
+        </a>
+        <a class="footer__social-link" href="#">
+          <img class="footer__social-img" src="img/ok.png" alt="" />
+        </a>
+        <a class="footer__social-link" href="#">
+          <img class="footer__social-img" src="img/rutube.png" alt="" />
+        </a>
+      </div>
+      <form class="footer__search" action="#">
+        <input class="footer__input" type="text" />
+        <button class="footer__search-btn" type="submit">Искать</button>
+      </form>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <div class="success">
+      <div class="success__head">Ваше ходатайство успешно отправлено</div>
+      <div class="success__close">✖</div>
+      <a class="success__link" href="./access.html">Перейти к списку ходатайств</a>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

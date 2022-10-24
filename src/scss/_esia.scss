@@ -1,0 +1,172 @@
+.esia {
+  &__header {
+    padding: 35px 0 40px;
+    background-color: #f7f9f9;
+  }
+
+  &__header-inner {
+    display: flex;
+    align-items: center;
+    max-width: 368px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+  }
+
+  &__logo-img {
+    width: 154px;
+    margin-right: 18px;
+  }
+
+  &__slogan {
+    margin: 0;
+    font-size: 12px;
+  }
+
+  &__main {
+    background-color: #f7f9f9;
+    flex-grow: 1;
+  }
+
+  &__main-inner {
+    max-width: 368px;
+    margin: 0 auto;
+    box-shadow: 0 0 0 3px #f0f0f0;
+    background: #fff;
+    padding: 30px 47px 34px;
+    margin-bottom: 30px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__form-title {
+    font-size: 32px;
+    font-weight: 500;
+    margin: 0 0 30px;
+  }
+
+  &__form-user {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+
+  &__form-user-avatar {
+    width: 70px;
+    height: 70px;
+    margin-right: 20px;
+  }
+
+  &__form-user-name {
+    font-size: 16px;
+    margin: 0;
+  }
+
+  &__form-inputbox {
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  &__form-label {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    color: #9a9a9a;
+    transition: 0.3s;
+  }
+
+  &__form-input {
+    width: 100%;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 25px 15px 5px;
+    border: 1px solid #cdd1d4;
+    color: #101010;
+
+    &::placeholder {
+      color: transparent;
+    }
+
+    &:focus + *,
+    &:not(:placeholder-shown) + * {
+      top: 5px;
+      font-size: 10px;
+    }
+  }
+
+  &__form-btn {
+    width: 100%;
+    background-color: #005faf;
+    font-size: 18px;
+    padding: 15px;
+    border-radius: 3px;
+    color: #fff;
+    margin-bottom: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background: #005398;
+    }
+  }
+
+  &__footer {
+    background-color: #e6ecec;
+  }
+
+  &__footer-inner {
+  }
+
+  &__footer-menu {
+    border-bottom: 1px solid #cdd1d4;
+    padding: 30px 0;
+  }
+
+  &__footer-menu-list {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__footer-menu-item {
+    margin-right: 30px;
+  }
+
+  &__footer-menu-link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__footer-info {
+    padding: 30px 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__footer-img-mks {
+    width: 64px;
+    height: 78px;
+    object-fit: cover;
+    object-position: top;
+  }
+
+  &__footer-img-rtk {
+    width: 65px;
+    height: 62px;
+    object-fit: cover;
+    object-position: bottom;
+  }
+
+  &__footer-copy {
+    margin: 0 40px;
+  }
+}

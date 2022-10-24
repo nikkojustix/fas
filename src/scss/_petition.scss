@@ -1,0 +1,65 @@
+.petition {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #007b84;
+    margin-bottom: 40px;
+  }
+
+  &__title {
+  }
+
+  &__btn {
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #006666;
+    cursor: pointer;
+  }
+
+  &__inner {
+  }
+
+  &__table {
+    tbody tr {
+      cursor: pointer;
+    }
+  }
+}
+.table {
+  border-collapse: collapse;
+  width: 100%;
+  th,
+  td {
+    border: 1px solid #007b84;
+    padding: 10px;
+  }
+
+  thead:nth-child(odd),
+  tr:nth-child(even) {
+    background-color: #00727234;
+  }
+
+  th {
+    font-size: 18px;
+    color: #006666;
+  }
+
+  tbody tr {
+    transition: 0.2s;
+
+    &:hover {
+      background-color: #e1cfa2;
+    }
+  }
+
+  &__link {
+    color: #006666;
+    text-decoration: none;
+    display: block;
+  }
+}

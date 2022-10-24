@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title": "Главная" })
+  <body>
+    <div class="wrapper">
+      <header class="header" id="header">
+        <div class="container">
+          <div class="header__inner">
+            <a class="logo" href="./lk.html">
+              <img class="logo__img" src="@img/logo.png" alt="Федеральная антимонопольная служба" />
+              <h1 class="title">Федеральная антимонопольная служба</h1>
+            </a>
+            <div class="header__profile">
+              <img class="header__avatar" src="@img/person.svg" alt="" />
+              <div class="header__username">Иванов Иван Иванович</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container">
+          <h2 class="main__title">Личный кабинет</h2>
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="@img/lk.png" alt="" /><span class="menu__link-text">Личный кабинет</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./access.html"
+                  ><img class="menu__link-icon" src="@img/approaches.png" alt="" /><span class="menu__link-text"
+                    >Доступ к материалам дела</span
+                  ></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="@img/approaches.png" alt="" /><span class="menu__link-text">Обращения</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="@img/approaches.png" alt="" /><span class="menu__link-text">Подписка</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="@img/examination.png" alt="" /><span class="menu__link-text">Самообследование</span></a
+                >
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="./lk.html"
+                  ><img class="menu__link-icon" src="@img/broadcasters.png" alt="" /><span class="menu__link-text">Вещатели</span></a
+                >
+              </li>
+            </ul>
+          </nav>
+          <section class="petition">
+            <header class="petition__header">
+              <h2 class="petition__title main__title">Мои ходатайства</h2>
+              <a class="petition__btn" href="./apply.html">Подать ходатайство</a>
+            </header>
+            <div class="petition__inner">
+              <table class="petition__table table">
+                <thead>
+                  <tr>
+                    <th>Дата подачи</th>
+                    <th>Номер ходатайства</th>
+                    <th>Номер дела</th>
+                    <th>Статус</th>
+                    <th>Комментарий</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>18.11.2022</td>
+                    <td>000002</td>
+                    <td>078/04/7.32.4-1267/2022</td>
+                    <td>Зарегистрирован</td>
+                    <td>Санкт-Петербургское УФАС России</td>
+                  </tr>
+                  <tr>
+                    <td>07.11.2022</td>
+                    <td>000001</td>
+                    <td>092/05/28-16/2022</td>
+                    <td>Доступ предоставлен до 10.11.2022</td>
+                    <td>Крымское УФАС России</td>
+                  </tr>
+                  <tr>
+                    <td>01.11.2022</td>
+                    <td>000000</td>
+                    <td>082/01/15-121/2022</td>
+                    <td>Срок предоставления доступа истек</td>
+                    <td>Крымское УФАС России</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      @@include('html/footer.html')
+    </div>
+    <div class="error">
+      <div class="error__head">В доступе отказано!</div>
+      <div class="error__close">✖</div>
+      <div class="error__body">Истек срок предоставления доступа</div>
+    </div>
+    <script src="js/app.min.js"></script>
+  </body>
+</html>
