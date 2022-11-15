@@ -2,6 +2,16 @@ import * as flsFunctions from './modules/functions.js';
 
 flsFunctions.isWebp();
 
+const menuBtn = document.querySelector('.menu-btn');
+const menu = document.querySelector('.menu');
+const menuList = document.querySelector('.menu__list');
+
+menuBtn.addEventListener('click', () => {
+  menuBtn.classList.toggle('menu-btn--active');
+  menu.classList.toggle('menu--active');
+  menuList.classList.toggle('menu__list--active');
+});
+
 const tableRows = document.querySelectorAll('.petition__table tbody tr');
 tableRows.forEach((row) => {
   row.addEventListener('click', (e) => {

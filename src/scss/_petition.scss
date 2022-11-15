@@ -2,9 +2,15 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     border-bottom: 3px solid #007b84;
     margin-bottom: 40px;
+    padding-bottom: 15px;
+  }
+
+  &__title {
+    border-bottom: none;
+    margin: 0;
   }
 
   &__btn {
@@ -19,9 +25,7 @@
   }
 
   &__table {
-    tbody tr {
-      cursor: pointer;
-    }
+    overflow-x: auto;
   }
 }
 .table {
@@ -44,6 +48,7 @@
   }
 
   tbody tr {
+    cursor: pointer;
     transition: 0.2s;
 
     &:hover {
@@ -55,5 +60,25 @@
     color: #006666;
     text-decoration: none;
     display: block;
+  }
+}
+
+@media (max-width: 767px) {
+  .table {
+    th,
+    td {
+      padding: 6px;
+      font-size: 15px;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .petition__header {
+    flex-direction: column;
+  }
+
+  .petition__btn {
+    margin-top: 10px;
   }
 }

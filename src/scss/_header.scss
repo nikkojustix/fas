@@ -1,16 +1,17 @@
 .header {
   margin-bottom: 60px;
+  border-top: 10px solid #1b898d;
 
   &__inner {
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
-    border-top: 10px solid #1b898d;
   }
 
   &__profile {
     display: flex;
     align-items: center;
+    margin-left: 20px;
   }
 
   &__avatar {
@@ -37,4 +38,35 @@
   margin: 0;
   font-weight: 400;
   font-size: 30px;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 26px;
+  }
+  .logo__img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__profile {
+      margin-top: 30px;
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+  .logo__img {
+    width: 75px;
+  }
 }

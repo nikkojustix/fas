@@ -87,16 +87,37 @@ body {
   margin-bottom: 80px;
 }
 
-.main__title {
-  font-size: 32px;
-  margin: 0;
+.main__header {
+  margin-bottom: 40px;
+}
+
+.main__header-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-bottom: 15px;
+  border-bottom: 3px solid #007b84;
+}
+
+.main__title {
+  margin: 0;
+  font-size: 32px;
 }
 
 .container {
-  max-width: 1230px;
+  position: relative;
+  max-width: 1210px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 0 20px;
 }
 
 .section {
@@ -111,9 +132,10 @@ body {
   text-transform: uppercase;
 }
 
-.menu {
-  border-top: 3px solid #007b84;
-  margin-bottom: 40px;
+.menu-btn {
+  display: none;
+  padding: 0;
+  margin-left: 20px;
 }
 
 .menu__list {
@@ -346,7 +368,6 @@ body {
 
 .form__fields-descr {
   font-size: 14px;
-  margin-bottom: -20px;
   display: block;
   text-align: right;
 }
@@ -363,6 +384,8 @@ body {
 
 .form__upload {
   cursor: pointer;
+  width: 100%;
+  white-space: normal;
 }
 
 .form__upload::-webkit-file-upload-button {
@@ -390,6 +413,7 @@ body {
 
 .header {
   margin-bottom: 60px;
+  border-top: 10px solid #1b898d;
 }
 
 .header__inner {
@@ -402,7 +426,6 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 10px;
-  border-top: 10px solid #1b898d;
 }
 
 .header__profile {
@@ -414,6 +437,7 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 20px;
 }
 
 .header__avatar {
@@ -494,9 +518,9 @@ body {
   width: 150px;
 }
 
-.footer__divider {
-  height: 10px;
-  background-color: #e1cfa2;
+.footer {
+  background-color: #f7f5ef;
+  border-top: 10px solid #e1cfa2;
 }
 
 .footer__inner {
@@ -509,7 +533,13 @@ body {
       -ms-flex-align: center;
           align-items: center;
   padding: 15px 10px 20px;
-  background-color: #f7f5ef;
+}
+
+.footer__contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .footer__info {
@@ -556,10 +586,16 @@ body {
 
 .footer__search {
   margin-left: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 320px;
+  width: 100%;
 }
 
 .footer__input {
-  width: 320px;
+  width: 100%;
   border: 1px solid #d7d7d7;
   padding: 5px;
   background: none;
@@ -622,7 +658,7 @@ body {
           box-shadow: 0 0 0 3px #f0f0f0;
   background: #fff;
   padding: 30px 47px 34px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 .esia__form {
@@ -795,11 +831,18 @@ body {
           justify-content: center;
 }
 
+.esia__footer-img-mks,
+.esia__footer-img-rtk {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .esia__footer-img-mks {
   width: 64px;
   height: 78px;
-  -o-object-fit: cover;
-     object-fit: cover;
   -o-object-position: top;
      object-position: top;
 }
@@ -807,8 +850,6 @@ body {
 .esia__footer-img-rtk {
   width: 65px;
   height: 62px;
-  -o-object-fit: cover;
-     object-fit: cover;
   -o-object-position: bottom;
      object-position: bottom;
 }
@@ -826,12 +867,18 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
   border-bottom: 3px solid #007b84;
   margin-bottom: 40px;
+  padding-bottom: 15px;
+}
+
+.petition__title {
+  border-bottom: none;
+  margin: 0;
 }
 
 .petition__btn {
@@ -845,8 +892,8 @@ body {
   cursor: pointer;
 }
 
-.petition__table tbody tr {
-  cursor: pointer;
+.petition__table {
+  overflow-x: auto;
 }
 
 .table {
@@ -871,6 +918,7 @@ body {
 }
 
 .table tbody tr {
+  cursor: pointer;
   -webkit-transition: 0.2s;
   -o-transition: 0.2s;
   transition: 0.2s;
@@ -884,4 +932,319 @@ body {
   color: #006666;
   text-decoration: none;
   display: block;
+}
+
+@media (max-width: 999px) {
+  .menu__list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    position: relative;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+
+  .menu__list::after {
+    content: "";
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .footer__contacts {
+    margin-bottom: 20px;
+  }
+
+  .footer__search {
+    margin: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-btn {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-btn--active .menu-btn__icon {
+    background-color: transparent;
+  }
+
+  .menu-btn--active .menu-btn__icon::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+    top: 0;
+  }
+
+  .menu-btn--active .menu-btn__icon::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    top: 0;
+  }
+
+  .menu-btn__text {
+    color: #066;
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+  .menu-btn__icon {
+    position: relative;
+    width: 20px;
+    height: 2px;
+    background-color: #007b84;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .menu-btn__icon::before,
+  .menu-btn__icon::after {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 2px;
+    left: 0;
+    background-color: #007b84;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .menu-btn__icon::before {
+    top: -6px;
+  }
+
+  .menu-btn__icon::after {
+    top: 6px;
+  }
+
+  .menu {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .menu--active {
+    max-height: 330px;
+  }
+
+  .menu__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    opacity: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+  }
+
+  .menu__list--active {
+    opacity: 1;
+  }
+
+  .main__title {
+    font-size: 26px;
+  }
+
+  .form__fields-title {
+    font-size: 18px;
+  }
+
+  .form__fields-descr {
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .title {
+    font-size: 26px;
+  }
+
+  .logo__img {
+    width: 100px;
+  }
+
+  .table th,
+  .table td {
+    padding: 6px;
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .form__fields {
+    padding: 40px 20px;
+  }
+
+  .form__fields-title--long {
+    width: 300px;
+  }
+
+  .header__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .header__profile {
+    margin-top: 30px;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+
+  .logo__img {
+    width: 75px;
+  }
+
+  .footer__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .footer__info {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .footer__search {
+    margin: 0;
+  }
+
+  .esia__header-inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .esia__logo-img {
+    margin-right: 0;
+  }
+
+  .esia__slogan {
+    text-align: center;
+  }
+
+  .esia__main-inner {
+    padding: 20px;
+  }
+
+  .esia__form-title {
+    margin-bottom: 20px;
+  }
+
+  .esia__form-user,
+  .esia__form-inputbox {
+    margin-bottom: 30px;
+  }
+
+  .esia__form-btn {
+    margin-bottom: 0;
+  }
+
+  .esia__footer-menu-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .esia__footer-menu-item {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .esia__footer-menu-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .esia__footer-info {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+
+  .esia__footer-img-mks,
+  .esia__footer-img-rtk {
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .esia__footer-copy {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 479px) {
+  .petition__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .petition__btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form__fields-title--long {
+    width: 180px;
+    top: -33px;
+  }
+
+  .form__fields-descr {
+    margin-top: 10px;
+  }
 }

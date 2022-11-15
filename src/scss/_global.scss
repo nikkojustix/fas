@@ -37,14 +37,26 @@ body {
   flex-grow: 1;
   margin-bottom: 80px;
 
-  &__title {
-    font-size: 32px;
-    margin: 0;
+  &__header {
+    margin-bottom: 40px;
+  }
+
+  &__header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-bottom: 15px;
+    border-bottom: 3px solid #007b84;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 32px;
   }
 }
 
 .container {
+  position: relative;
   max-width: calc($container-width + $container-padding * 2) + px;
   margin: 0 auto;
   padding: 0 $container-padding + px;
@@ -61,9 +73,13 @@ body {
   }
 }
 
+.menu-btn {
+  display: none;
+  padding: 0;
+  margin-left: 20px;
+}
+
 .menu {
-  border-top: 3px solid #007b84;
-  margin-bottom: 40px;
   &__list {
     display: flex;
     justify-content: space-between;
@@ -238,7 +254,6 @@ body {
 
   &__fields-descr {
     font-size: 14px;
-    margin-bottom: -20px;
     display: block;
     text-align: right;
   }
@@ -255,6 +270,8 @@ body {
 
   &__upload {
     cursor: pointer;
+    width: 100%;
+    white-space: normal;
 
     &::-webkit-file-upload-button {
       background-color: transparent;
@@ -276,5 +293,135 @@ body {
     cursor: pointer;
     grid-column-start: 1;
     grid-column-end: 3;
+  }
+}
+
+@media (max-width: 999px) {
+  .menu {
+    &__list {
+      flex-wrap: wrap;
+      position: relative;
+      justify-content: flex-start;
+      &::after {
+        content: '';
+        margin-right: auto;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-btn {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    &--active {
+      .menu-btn__icon {
+        background-color: transparent;
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+      }
+    }
+
+    &__text {
+      color: #066;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+
+    &__icon {
+      position: relative;
+      width: 20px;
+      height: 2px;
+      background-color: #007b84;
+      transition: 0.3s;
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 2px;
+        left: 0;
+        background-color: #007b84;
+        transition: 0.3s;
+      }
+
+      &::before {
+        top: -6px;
+      }
+
+      &::after {
+        top: 6px;
+      }
+    }
+  }
+
+  .menu {
+    margin: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &--active {
+      max-height: 330px;
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: center;
+      opacity: 0;
+      transition: 0.3s;
+      &--active {
+        opacity: 1;
+      }
+    }
+  }
+
+  .main__title {
+    font-size: 26px;
+  }
+
+  .form {
+    &__fields-title {
+      font-size: 18px;
+    }
+    &__fields-descr {
+      text-align: left;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    &__fields {
+      padding: 40px 20px;
+    }
+    &__fields-title--long {
+      width: 300px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .form {
+    &__fields-title--long {
+      width: 180px;
+      top: -33px;
+    }
+
+    &__fields-descr {
+      margin-top: 10px;
+    }
   }
 }

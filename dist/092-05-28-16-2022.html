@@ -7,12 +7,12 @@
   <title>Личный кабинет | Федеральная антимонопольная служба</title>
   <link
     rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css?_v=20221024164721"
+    href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css?_v=20221115155506"
     integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="css/style.min.css?_v=20221024164721" />
+  <link rel="stylesheet" href="css/style.min.css?_v=20221115155506" />
 </head>
 
   <body>
@@ -34,43 +34,50 @@
 
       <main class="main">
         <div class="container">
-          <h2 class="main__title">Личный кабинет</h2>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><picture><source srcset="img/lk.webp" type="image/webp"><img class="menu__link-icon" src="img/lk.png" alt="" /></picture><span class="menu__link-text">Личный кабинет</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./access.html"
-                  ><picture><source srcset="img/approaches.webp" type="image/webp"><img class="menu__link-icon" src="img/approaches.png" alt="" /></picture><span class="menu__link-text"
-                    >Доступ к материалам дела</span
-                  ></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><picture><source srcset="img/approaches.webp" type="image/webp"><img class="menu__link-icon" src="img/approaches.png" alt="" /></picture><span class="menu__link-text">Обращения</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><picture><source srcset="img/approaches.webp" type="image/webp"><img class="menu__link-icon" src="img/approaches.png" alt="" /></picture><span class="menu__link-text">Подписка</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><picture><source srcset="img/examination.webp" type="image/webp"><img class="menu__link-icon" src="img/examination.png" alt="" /></picture><span class="menu__link-text">Самообследование</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><picture><source srcset="img/broadcasters.webp" type="image/webp"><img class="menu__link-icon" src="img/broadcasters.png" alt="" /></picture><span class="menu__link-text">Вещатели</span></a
-                >
-              </li>
-            </ul>
-          </nav>
+          <div class="main__header">
+            <div class="main__header-top">
+              <h2 class="main__title">Личный кабинет</h2>
+              <button class="menu-btn">
+                <span class="menu-btn__text">Меню</span>
+                <span class="menu-btn__icon"></span>
+              </button>
+            </div>
+            <nav class="menu">
+  <ul class="menu__list">
+    <li class="menu__item">
+      <a class="menu__link" href="./lk.html"
+        ><picture><source srcset="img/lk.webp" type="image/webp"><img class="menu__link-icon" src="img/lk.png" alt="" /></picture><span class="menu__link-text">Личный кабинет</span></a
+      >
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="./access.html"
+        ><picture><source srcset="img/approaches.webp" type="image/webp"><img class="menu__link-icon" src="img/approaches.png" alt="" /></picture><span class="menu__link-text">Доступ к материалам дела</span></a
+      >
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="./lk.html"
+        ><picture><source srcset="img/approaches.webp" type="image/webp"><img class="menu__link-icon" src="img/approaches.png" alt="" /></picture><span class="menu__link-text">Обращения</span></a
+      >
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="./lk.html"
+        ><picture><source srcset="img/approaches.webp" type="image/webp"><img class="menu__link-icon" src="img/approaches.png" alt="" /></picture><span class="menu__link-text">Подписка</span></a
+      >
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="./lk.html"
+        ><picture><source srcset="img/examination.webp" type="image/webp"><img class="menu__link-icon" src="img/examination.png" alt="" /></picture><span class="menu__link-text">Самообследование</span></a
+      >
+    </li>
+    <li class="menu__item">
+      <a class="menu__link" href="./lk.html"
+        ><picture><source srcset="img/broadcasters.webp" type="image/webp"><img class="menu__link-icon" src="img/broadcasters.png" alt="" /></picture><span class="menu__link-text">Вещатели</span></a
+      >
+    </li>
+  </ul>
+</nav>
+
+          </div>
           <section class="petition">
             <header class="petition__header">
               <h2 class="petition__title main__title">Просмотр материалов дела №092/05/28-16/2022</h2>
@@ -140,26 +147,28 @@
   <div class="container">
     <div class="footer__divider"></div>
     <div class="footer__inner">
-      <div class="footer__info">
-        <p class="footer__copy">© ФАС России 2022.</p>
-        <a class="footer__feedback" href="#">Обратная связь</a>
-      </div>
-      <div class="footer__socials">
-        <a class="footer__social-link" href="#">
-          <picture><source srcset="img/telegram.webp" type="image/webp"><img class="footer__social-img" src="img/telegram.png" alt="" /></picture>
-        </a>
-        <a class="footer__social-link" href="#">
-          <picture><source srcset="img/vk.webp" type="image/webp"><img class="footer__social-img" src="img/vk.png" alt="" /></picture>
-        </a>
-        <a class="footer__social-link" href="#">
-          <picture><source srcset="img/youtube.webp" type="image/webp"><img class="footer__social-img" src="img/youtube.png" alt="" /></picture>
-        </a>
-        <a class="footer__social-link" href="#">
-          <picture><source srcset="img/ok.webp" type="image/webp"><img class="footer__social-img" src="img/ok.png" alt="" /></picture>
-        </a>
-        <a class="footer__social-link" href="#">
-          <picture><source srcset="img/rutube.webp" type="image/webp"><img class="footer__social-img" src="img/rutube.png" alt="" /></picture>
-        </a>
+      <div class="footer__contacts">
+        <div class="footer__info">
+          <p class="footer__copy">© ФАС России 2022.</p>
+          <a class="footer__feedback" href="#">Обратная связь</a>
+        </div>
+        <div class="footer__socials">
+          <a class="footer__social-link" href="#">
+            <picture><source srcset="img/telegram.webp" type="image/webp"><img class="footer__social-img" src="img/telegram.png" alt="" /></picture>
+          </a>
+          <a class="footer__social-link" href="#">
+            <picture><source srcset="img/vk.webp" type="image/webp"><img class="footer__social-img" src="img/vk.png" alt="" /></picture>
+          </a>
+          <a class="footer__social-link" href="#">
+            <picture><source srcset="img/youtube.webp" type="image/webp"><img class="footer__social-img" src="img/youtube.png" alt="" /></picture>
+          </a>
+          <a class="footer__social-link" href="#">
+            <picture><source srcset="img/ok.webp" type="image/webp"><img class="footer__social-img" src="img/ok.png" alt="" /></picture>
+          </a>
+          <a class="footer__social-link" href="#">
+            <picture><source srcset="img/rutube.webp" type="image/webp"><img class="footer__social-img" src="img/rutube.png" alt="" /></picture>
+          </a>
+        </div>
       </div>
       <form class="footer__search" action="#">
         <input class="footer__input" type="text" />
@@ -170,6 +179,6 @@
 </footer>
 
     </div>
-    <script src="js/app.min.js?_v=20221024164721"></script>
+    <script src="js/app.min.js?_v=20221115155506"></script>
   </body>
 </html>

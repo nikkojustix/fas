@@ -20,83 +20,58 @@
 
       <main class="main">
         <div class="container">
-          <h2 class="main__title">Личный кабинет</h2>
-          <nav class="menu">
-            <ul class="menu__list">
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><img class="menu__link-icon" src="@img/lk.png" alt="" /><span class="menu__link-text">Личный кабинет</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./access.html"
-                  ><img class="menu__link-icon" src="@img/approaches.png" alt="" /><span class="menu__link-text"
-                    >Доступ к материалам дела</span
-                  ></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><img class="menu__link-icon" src="@img/approaches.png" alt="" /><span class="menu__link-text">Обращения</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><img class="menu__link-icon" src="@img/approaches.png" alt="" /><span class="menu__link-text">Подписка</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><img class="menu__link-icon" src="@img/examination.png" alt="" /><span class="menu__link-text">Самообследование</span></a
-                >
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="./lk.html"
-                  ><img class="menu__link-icon" src="@img/broadcasters.png" alt="" /><span class="menu__link-text">Вещатели</span></a
-                >
-              </li>
-            </ul>
-          </nav>
+          <div class="main__header">
+            <div class="main__header-top">
+              <h2 class="main__title">Личный кабинет</h2>
+              <button class="menu-btn">
+                <span class="menu-btn__text">Меню</span>
+                <span class="menu-btn__icon"></span>
+              </button>
+            </div>
+            @@include('html/nav.html')
+          </div>
           <section class="petition">
             <header class="petition__header">
               <h2 class="petition__title main__title">Мои ходатайства</h2>
               <a class="petition__btn" href="./apply.html">Подать ходатайство</a>
             </header>
             <div class="petition__inner">
-              <table class="petition__table table">
-                <thead>
-                  <tr>
-                    <th>Дата подачи</th>
-                    <th>Номер ходатайства</th>
-                    <th>Номер дела</th>
-                    <th>Статус</th>
-                    <th>Комментарий</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>18.11.2022</td>
-                    <td>000002</td>
-                    <td>078/04/7.32.4-1267/2022</td>
-                    <td>Зарегистрирован</td>
-                    <td>Санкт-Петербургское УФАС России</td>
-                  </tr>
-                  <tr>
-                    <td>07.11.2022</td>
-                    <td>000001</td>
-                    <td>092/05/28-16/2022</td>
-                    <td>Доступ предоставлен до 10.11.2022</td>
-                    <td>Крымское УФАС России</td>
-                  </tr>
-                  <tr>
-                    <td>01.11.2022</td>
-                    <td>000000</td>
-                    <td>082/01/15-121/2022</td>
-                    <td>Срок предоставления доступа истек</td>
-                    <td>Крымское УФАС России</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div class="petition__table">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Дата подачи</th>
+                      <th>Номер ходатайства</th>
+                      <th>Номер дела</th>
+                      <th>Статус</th>
+                      <th>Комментарий</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>18.11.2022</td>
+                      <td>000002</td>
+                      <td>078/04/7.32.4-1267/2022</td>
+                      <td>Зарегистрирован</td>
+                      <td>Санкт-Петербургское УФАС России</td>
+                    </tr>
+                    <tr>
+                      <td>07.11.2022</td>
+                      <td>000001</td>
+                      <td>092/05/28-16/2022</td>
+                      <td>Доступ предоставлен до 10.11.2022</td>
+                      <td>Крымское УФАС России</td>
+                    </tr>
+                    <tr>
+                      <td>01.11.2022</td>
+                      <td>000000</td>
+                      <td>082/01/15-121/2022</td>
+                      <td>Срок предоставления доступа истек</td>
+                      <td>Крымское УФАС России</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
           </section>
         </div>

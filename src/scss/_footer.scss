@@ -1,14 +1,15 @@
 .footer {
-  &__divider {
-    height: 10px;
-    background-color: #e1cfa2;
-  }
+  background-color: #f7f5ef;
+  border-top: 10px solid #e1cfa2;
 
   &__inner {
     display: flex;
     align-items: center;
     padding: 15px 10px 20px;
-    background-color: #f7f5ef;
+  }
+
+  &__contacts {
+    display: flex;
   }
 
   &__info {
@@ -45,10 +46,13 @@
 
   &__search {
     margin-left: auto;
+    display: flex;
+    max-width: 320px;
+    width: 100%;
   }
 
   &__input {
-    width: 320px;
+    width: 100%;
     border: 1px solid #d7d7d7;
     padding: 5px;
     background: none;
@@ -66,5 +70,35 @@
     padding: 0;
     background: none;
     cursor: pointer;
+  }
+}
+
+@media (max-width: 900px) {
+  .footer {
+    &__inner {
+      flex-direction: column;
+    }
+    &__contacts {
+      margin-bottom: 20px;
+    }
+    &__search {
+      margin: 0;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    &__contacts {
+      flex-direction: column;
+      align-items: center;
+    }
+    &__info {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    &__search {
+      margin: 0;
+    }
   }
 }
